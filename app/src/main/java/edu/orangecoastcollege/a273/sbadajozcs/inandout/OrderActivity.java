@@ -18,13 +18,13 @@ public class OrderActivity extends AppCompatActivity {
     protected void createOrder(View view) {
         Intent intent = new Intent(this, SummaryActivity.class);
         // If you squint real hard you can pretend its readable code
-        Order order = new Order(Integer.valueOf(((TextView)findViewById(R.id.doubledoubleTextView)).getText().toString()),
-                Integer.valueOf(((TextView)findViewById(R.id.cheeseburgerTextView)).getText().toString()),
-                Integer.valueOf(((TextView)findViewById(R.id.frenchFriesTextView)).getText().toString()),
-                Integer.valueOf(((TextView)findViewById(R.id.shakesTextView)).getText().toString()),
-                Integer.valueOf(((TextView)findViewById(R.id.smallDrinkTextView)).getText().toString()),
-                Integer.valueOf(((TextView)findViewById(R.id.mediumDrinkTextView)).getText().toString()),
-                Integer.valueOf(((TextView)findViewById(R.id.largeDrinkTextView)).getText().toString()));
+        Order order = new Order(Integer.parseInt(((TextView)findViewById(R.id.doubledoubleTextView)).getText().toString()),
+                Integer.parseInt(((TextView)findViewById(R.id.cheeseburgerTextView)).getText().toString()),
+                Integer.parseInt(((TextView)findViewById(R.id.frenchFriesTextView)).getText().toString()),
+                Integer.parseInt(((TextView)findViewById(R.id.shakesTextView)).getText().toString()),
+                Integer.parseInt(((TextView)findViewById(R.id.smallDrinkTextView)).getText().toString()),
+                Integer.parseInt(((TextView)findViewById(R.id.mediumDrinkTextView)).getText().toString()),
+                Integer.parseInt(((TextView)findViewById(R.id.largeDrinkTextView)).getText().toString()));
 
         intent.putExtra("Num", order.numItems());
         intent.putExtra("Subtotal", order.getSubtotal());
