@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">In And Out</string>
+    <string name="cheeseburger">Royale with cheese $2.15</string>
+    <string name="double_double">Double Double $3.60</string>
+    <string name="fountain_drinks">boissons à la fontaine (choisissez votre taille)</string>
+    <string name="french_fries">French Fries $1.65</string>
+    <string name="items_ordered">"Les articles commandés: "</string>
+    <string name="large">Grand $1.75</string>
+    <string name="medium">Moyen $1.55</string>
+    <string name="new_order">Commencer Un Nouvel Ordre</string>
+    <string name="order_title">Commander</string>
+    <string name="order_total">Total de la Commande $</string>
+    <string name="place_order">Commander</string>
+    <string name="shakes">Milk-shake $2.20</string>
+    <string name="small">Petit $1.45</string>
+    <string name="subtotal">Sous Total: $</string>
+    <string name="tax">Impôt (8%): $</string>
+</resources>
