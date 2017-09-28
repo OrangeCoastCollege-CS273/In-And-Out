@@ -10,9 +10,9 @@ public class Order {
     private int mMedium;
     private int mLarge;
 
-    private double mSubtotal;
-    private double mTax;
-    private double mTotal;
+    private float mSubtotal;
+    private float mTax;
+    private float mTotal;
 
     public Order(int doubleDouble, int cheeseBurger, int frenchFries, int shakes, int small, int medium, int large) {
         mDoubleDouble = doubleDouble;
@@ -34,32 +34,32 @@ public class Order {
 
     private void calculateSubtotal() {
         mSubtotal =
-                mDoubleDouble * 3.6 +
-                mCheeseBurger * 2.15 +
-                mFrenchFries * 1.65 +
-                mShakes * 2.2 +
-                mSmall * 1.45 +
-                mMedium * 1.55 +
-                mLarge * 1.75;
+                (float) (mDoubleDouble * 3.6 +
+                                mCheeseBurger * 2.15 +
+                                mFrenchFries * 1.65 +
+                                mShakes * 2.2 +
+                                mSmall * 1.45 +
+                                mMedium * 1.55 +
+                                mLarge * 1.75);
     }
 
     private void calculateTax() {
-        mTax =  mSubtotal * .08;
+        mTax = (float) (mSubtotal * .08);
     }
 
     private void calculateTotal() {
         mTotal = mTax + mSubtotal;
     }
 
-    public double getSubtotal() {
+    public float getSubtotal() {
         return mSubtotal;
     }
 
-    public double getTax() {
+    public float getTax() {
         return mTax;
     }
 
-    public double getTotal() {
+    public float getTotal() {
         return mTotal;
     }
 }

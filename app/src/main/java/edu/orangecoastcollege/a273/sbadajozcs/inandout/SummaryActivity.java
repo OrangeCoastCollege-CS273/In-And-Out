@@ -19,7 +19,7 @@ public class SummaryActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.itemsOrderedTextView)).setText(getString(R.string.items_ordered) + String.valueOf(intent.getIntExtra("Num", 0)));
         ((TextView) findViewById(R.id.subtotalTextView)).setText(getString(R.string.subtotal) + String.valueOf(intent.getFloatExtra("Subtotal", 0.0f)));
         ((TextView) findViewById(R.id.taxTextView)).setText(getString(R.string.tax) + String.valueOf(intent.getFloatExtra("Tax", 0.0f)));
-    }
+        }
 
     protected void goBack(View view) {
         finish();
