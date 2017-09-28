@@ -15,10 +15,10 @@ public class SummaryActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        ((TextView) findViewById(R.id.orderTotalTextView)).setText(String.valueOf(intent.getFloatExtra("Total", 0.0f)));
-        ((TextView) findViewById(R.id.itemsOrderedTextView)).setText(String.valueOf(intent.getIntExtra("Num", 0)));
-        ((TextView) findViewById(R.id.subtotalTextView)).setText(String.valueOf(intent.getFloatExtra("Subtotal", 0.0f)));
-        ((TextView) findViewById(R.id.taxTextView)).setText(String.valueOf(intent.getFloatExtra("Tax", 0.0f)));
+        ((TextView) findViewById(R.id.orderTotalTextView)).setText(getString(R.string.order_total) + String.valueOf(intent.getFloatExtra("Total", 0.0f)));
+        ((TextView) findViewById(R.id.itemsOrderedTextView)).setText(getString(R.string.items_ordered) + String.valueOf(intent.getIntExtra("Num", 0)));
+        ((TextView) findViewById(R.id.subtotalTextView)).setText(getString(R.string.subtotal) + String.valueOf(intent.getFloatExtra("Subtotal", 0.0f)));
+        ((TextView) findViewById(R.id.taxTextView)).setText(getString(R.string.tax) + String.valueOf(intent.getFloatExtra("Tax", 0.0f)));
     }
 
     protected void goBack(View view) {
