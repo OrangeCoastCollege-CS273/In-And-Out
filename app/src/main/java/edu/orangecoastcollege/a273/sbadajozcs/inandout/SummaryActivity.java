@@ -8,6 +8,14 @@ import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
 
+    /**
+     * Called when the activity is starting.
+     *
+     * Grabs Extras from Intent and puts the text into the {@link TextView}s
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously being shut down then this Bundle
+     *                           contains the data it most recently supplied in onSaveInstanceState(Bundle). Note: Otherwise it is null.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +29,10 @@ public class SummaryActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.taxTextView)).setText(getString(R.string.tax) + String.valueOf(intent.getFloatExtra("Tax", 0.0f)));
         }
 
+    /**
+     * Ends current activity, goes back to {@link OrderActivity}
+     * @param view The clicked {@link View}
+     */
     protected void goBack(View view) {
         finish();
     }

@@ -1,6 +1,11 @@
 package edu.orangecoastcollege.a273.sbadajozcs.inandout;
 
-
+/**
+ * Represents an order at In n Out
+ *
+ * Contains all needed member variables and methods to calculate needed data
+ *      i.e. Subtotal, Tax, and Total
+ */
 public class Order {
     private int mDoubleDouble;
     private int mCheeseBurger;
@@ -14,6 +19,18 @@ public class Order {
     private float mTax;
     private float mTotal;
 
+    /**
+     * Creates and instance of an Order using given parameters
+     * then calls the calculation methods to find other values
+     *
+     * @param doubleDouble number of double doubles
+     * @param cheeseBurger number of cheeseburgers
+     * @param frenchFries number of french fry orders
+     * @param shakes number of shakes
+     * @param small number of small drinks
+     * @param medium number of medium drinks
+     * @param large number of large drinks
+     */
     public Order(int doubleDouble, int cheeseBurger, int frenchFries, int shakes, int small, int medium, int large) {
         mDoubleDouble = doubleDouble;
         mCheeseBurger = cheeseBurger;
@@ -28,6 +45,10 @@ public class Order {
         calculateTotal();
     }
 
+    /**
+     * Calculates the total number of items in the order
+     * @return total number of items
+     */
     public int numItems() {
         return mDoubleDouble + mCheeseBurger + mFrenchFries + mLarge + mMedium + mSmall;
     }
@@ -51,14 +72,29 @@ public class Order {
         mTotal = mTax + mSubtotal;
     }
 
+    /**
+     * Retrieves the subtotal of the order
+     *
+     * @return order subtotal
+     */
     public float getSubtotal() {
         return mSubtotal;
     }
 
+    /**
+     * Returns the amount of tax on the order
+     *
+     * @return tax amount
+     */
     public float getTax() {
         return mTax;
     }
 
+    /**
+     * Returns the total for the order including tax
+     *
+     * @return Total
+     */
     public float getTotal() {
         return mTotal;
     }
